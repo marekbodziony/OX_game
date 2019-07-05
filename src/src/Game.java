@@ -50,7 +50,15 @@ public class Game {
     }
 
     private void checkIfWin() {
-        if (xo[0] == actSymbol && xo[1] == actSymbol && xo[2] == actSymbol) {    // check for all possible win set
+        if ((xo[0] == actSymbol && xo[1] == actSymbol && xo[2] == actSymbol) ||
+            (xo[3] == actSymbol && xo[4] == actSymbol && xo[5] == actSymbol) ||
+            (xo[6] == actSymbol && xo[7] == actSymbol && xo[8] == actSymbol) ||
+            (xo[0] == actSymbol && xo[4] == actSymbol && xo[7] == actSymbol) ||
+            (xo[1] == actSymbol && xo[3] == actSymbol && xo[6] == actSymbol) ||
+            (xo[1] == actSymbol && xo[4] == actSymbol && xo[7] == actSymbol) ||
+            (xo[2] == actSymbol && xo[5] == actSymbol && xo[8] == actSymbol) ||
+            (xo[0] == actSymbol && xo[4] == actSymbol && xo[8] == actSymbol) ||
+            (xo[2] == actSymbol && xo[4] == actSymbol && xo[6] == actSymbol)){
             weHaveWinner = true;
             displayGame();
             System.out.println("Player '" + actSymbol + "' wins the Game!");
